@@ -25,13 +25,13 @@
         <div class="linha">
           <div class="coluna">
             <div class="card">
-              <div class="frame">
+              <div>
                 <div class="text-wrapper-2">Bem-vindo novamente, Erik!</div>
                 <p class="p">
                   Confira os principais indicadores de performance das suas entregas ou navegue pela barra de buscas.
                 </p>
               </div>
-              <button class="button-pedido">PEDIDOS</button>
+              <button class="btn btn-warning">PEDIDOS</button>
             </div>
             <div class="linha-2">
               <div class="buttons-2 pedido-btn">
@@ -65,7 +65,7 @@
               <div class="banner">
                 <img class="img" src="img/feather-icons-alert-triangle-1.svg" />
                 <p class="h-pedidos">
-                  <span class="span">Há pedidos relacionados, sem estoque, </span>
+                  <span class="span">Há pedidos relacionados, sem estoque,</span>
                   <a href="/" class="text-wrapper-3">verificar agora!</a>
                 </p>
               </div>
