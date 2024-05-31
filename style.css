@@ -1,4 +1,3 @@
-/* Estilos gerais */
 .dashboard-pedidos {
   display: flex;
   flex-direction: column;
@@ -26,64 +25,6 @@
   background-color: var(--roxo-vaptroxo-vapt-900);
 }
 
-.dashboard-pedidos .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 24px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.dashboard-pedidos .divider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 24px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.dashboard-pedidos .line {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 1px;
-  margin-top: -1px;
-  object-fit: cover;
-}
-
-.dashboard-pedidos .section-painel {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 16px;
-  position: relative;
-  flex: 1;
-  align-self: stretch;
-  width: 100%;
-  flex-grow: 1;
-  background-color: var(--roxo-vaptroxo-vapt-oficial);
-}
-
-.dashboard-pedidos .title {
-  display: flex;
-  align-items: flex-start;
-  padding: 8px 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
 .dashboard-pedidos .text-wrapper {
   position: relative;
   width: fit-content;
@@ -91,89 +32,6 @@
   font-family: "Open Sans", Helvetica;
   font-weight: 700;
   color: var(--roxo-vaptroxo-vapt-100);
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.dashboard-pedidos .menu-button-group {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: var(--roxo-vaptroxo-vapt-secundrio);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.dashboard-pedidos .img {
-  position: relative;
-  width: 24px;
-  height: 24px;
-}
-
-.dashboard-pedidos .div {
-  position: relative;
-  flex: 1;
-  margin-top: -1px;
-  font-family: "Open Sans", Helvetica;
-  font-weight: 600;
-  color: var(--roxo-vaptroxo-vapt-100);
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.dashboard-pedidos .div-2 {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.dashboard-pedidos .logo-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.dashboard-pedidos .menu-button-single {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.dashboard-pedidos .title-2 {
-  position: relative;
-  width: fit-content;
-  font-family: "Open Sans", Helvetica;
-  font-weight: 600;
-  color: var(--roxo-vaptroxo-vapt-300);
   font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
@@ -231,15 +89,6 @@
   box-shadow: var(--dropshadow);
 }
 
-.dashboard-pedidos .frame {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
 
 .dashboard-pedidos .text-wrapper-2 {
   position: relative;
@@ -254,7 +103,7 @@
   font-style: var(--t-tulos-grandes-font-style);
 }
 
-.dashboard-pedidos .p {
+.p {
   position: relative;
   align-self: stretch;
   font-family: "Open Sans", Helvetica;
@@ -265,7 +114,7 @@
   line-height: normal;
 }
 
-.dashboard-pedidos .button {
+.button {
   all: unset;
   box-sizing: border-box;
   display: flex;
@@ -280,7 +129,7 @@
   border-radius: 4px;
 }
 
-.dashboard-pedidos .linha-2 {
+.linha-2 {
   height: 134px;
   gap: 8px;
   display: flex;
@@ -289,8 +138,7 @@
   align-self: stretch;
   width: 100%;
 }
-
-.dashboard-pedidos .buttons {
+ .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -305,8 +153,7 @@
   overflow: hidden;
   box-shadow: var(--dropshadow);
 }
-
-.dashboard-pedidos .title-3 {
+ .title-3 {
   position: relative;
   align-self: stretch;
   margin-top: -1px;
@@ -319,8 +166,7 @@
   line-height: var (--t-tulos-pequenos-line-height);
   font-style: var (--t-tulos-pequenos-font-style);
 }
-
-.dashboard-pedidos .element {
+ .element {
   position: relative;
   flex: 1;
   align-self: stretch;
@@ -335,6 +181,7 @@
 
 .buttons-2 {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   align-items: center;
   gap: 8px;
@@ -350,8 +197,7 @@
   border-color: var(--roxo-vaptroxo-vapt-300);
   box-shadow: var(--dropshadow);
 }
-
-.dashboard-pedidos .title-4 {
+ .title-4 {
   position: relative;
   align-self: stretch;
   margin-top: -1px;
@@ -364,8 +210,7 @@
   line-height: var (--t-tulos-pequenos-line-height);
   font-style: var (--t-tulos-pequenos-font-style);
 }
-
-.dashboard-pedidos .element-2 {
+ .element-2 {
   position: relative;
   flex: 1;
   align-self: stretch;
@@ -378,7 +223,7 @@
   line-height: normal;
 }
 
-.dashboard-pedidos .coluna-2 {
+.coluna-2 {
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -389,8 +234,7 @@
   flex: 1;
   flex-grow: 1;
 }
-
-.dashboard-pedidos .linha-banners {
+ .linha-banners {
   flex-direction: column;
   gap: 16px;
   flex: 0 0 auto;
@@ -400,8 +244,7 @@
   align-self: stretch;
   width: 100%;
 }
-
-.dashboard-pedidos .banner {
+ .banner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -417,19 +260,7 @@
   box-shadow: var(--dropshadow);
 }
 
-.dashboard-pedidos .h-pedidos {
-  position: relative;
-  flex: 1;
-  margin-top: -1px;
-  font-family: "Open Sans", Helvetica;
-  font-weight: 400;
-  color: var(--amarelo-vaptamarelo-vapt-oficial);
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.dashboard-pedidos .span {
+ .span {
   font-family: "Open Sans", Helvetica;
   font-weight: 400;
   color: #f9b725;
@@ -437,7 +268,7 @@
   letter-spacing: 0;
 }
 
-.dashboard-pedidos .text-wrapper-3 {
+.text-wrapper-3 {
   font-weight: 700;
   text-decoration: underline;
   color: var(--Amarelo-Vapt-Amarelo-Vapt-OFICIAL, #F9B725);
@@ -450,7 +281,7 @@
   cursor: pointer;
 }
 
-.dashboard-pedidos .bar-graph {
+.bar-graph {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -467,7 +298,7 @@
 }
 
 
-.dashboard-pedidos .card-2 {
+.card-2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -496,7 +327,7 @@
   line-height: normal;
 }
 
-.dashboard-pedidos .frame-3 {
+.frame-3 {
   display: flex;
   align-items: flex-end;
   gap: 8px;
@@ -534,8 +365,8 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 9px 12px;
   position: relative;
+  padding: 8px;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
@@ -554,6 +385,7 @@
   align-items: center;
   gap: 8px;
   border: none;
+  padding: 2px;
   position: relative;
   flex: 1;
   flex-grow: 1;
@@ -570,15 +402,7 @@
   border: none;
 }
 
-input,
-button,
-textarea,
-select {
-  outline: none;
-  border: none;
-}
-
-.dashboard-pedidos .select-2 {
+.select-2 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -591,28 +415,23 @@ select {
   white-space: nowrap;
 }
 
-.dashboard-pedidos .caret-down {
+.caret-down {
   position: relative;
   width: 16px;
   height: 16px;
 }
 
-.dashboard-pedidos .select-3 {
+.select-3 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: var(--bodytext-inter-14-regular-font-family);
-  font-weight: var(--bodytext-inter-14-regular-font-weight);
   color: var(--gray-0270);
-  font-size: var(--bodytext-inter-14-regular-font-size);
-  letter-spacing: var (--bodytext-inter-14-regular-letter-spacing);
   line-height: var (--bodytext-inter-14-regular-line-height);
   white-space: nowrap;
   font-style: var (--bodytext-inter-14-regular-font-style);
 }
 
-
-.dashboard-pedidos .img-2 {
+.img-2 {
   position: relative;
   width: 20px;
   height: 20px;
@@ -650,11 +469,6 @@ select {
 .button-4:active {
   background-color: #ccc;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.element-2 {
-  font-size: 24px;
-  color: #555;
 }
 
 .linha-2 {
@@ -712,6 +526,38 @@ select {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.button-pedido:focus{
+  outline: thin dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}
+
+.button-pedido {
+  background-color: var(--amarelo-vaptamarelo-vapt-oficial);
+  display: flex;
+  width: 4.8125rem;
+  height: 2.25rem;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--Roxo-Vapt-Roxo-Vapt-OFICIAL);
+  font-family: "Open Sans";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-pedido:hover {
+  background-color: #979797;
+}
+
 .cabecalho {
   background-color: var(--roxo-vaptroxo-vapt-oficial);
   color: #ffffff;
@@ -740,12 +586,51 @@ select {
 }
 
 .tabela td {
-  padding: 18px;
-  text-align: center;
+  padding: 2.375rem;
   border-bottom: 1px solid #b3b3b3;
   font-family: "Open Sans", Helvetica, sans-serif;
-  font-size: 12px;
   color: var(--roxo-vaptroxo-vapt-700);
+  font-size: 0.80rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.linha-3 {
+  padding: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .linha,
+  .linha-2,
+  .coluna,
+  .coluna-2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tabela {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .bar-graph {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .buttons-2, .card, .banner, .card-2 {
+    padding: 16px;
+  }
+
+  .element-2 {
+    font-size: 24px;
+  }
+
+  .text-wrapper-2, .title-3, .title-4, .text-wrapperfilter {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -762,7 +647,7 @@ select {
     overflow-x: auto;
   }
 
-  .dashboard-pedidos .bar-graph {
+  .bar-graph {
     width: 100%;
     padding: 16px;
   }
@@ -786,13 +671,17 @@ select {
   color: #333;
 }
 
+.selectnf {
+    padding: 9px 12px;
+}
+
 .datepicker .datepicker-days table {
   width: 100%;
 }
 
 .datepicker .datepicker-days th,
 .datepicker .datepicker-days td {
-  padding: 10px;
+  padding: 9px;
   text-align: center;
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
