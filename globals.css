@@ -1,4 +1,3 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800,var(--t-tulos-pequenos-font-weight),700,600,var(--t-tulos-pequenos-em-BOLD-font-weight),var(--t-tulos-grandes-font-weight)|Inter:var(--bodytext-inter-14-regular-font-weight),var(--bodytext-inter-14-medium-font-weight),400");
 :root {
   --roxo-vaptroxo-vapt-100: rgba(215, 190, 217, 1);
@@ -49,10 +48,12 @@
   --bodytext-inter-14-medium-font-style: normal;
   --dropshadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   --shadow-2: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  --rota-modal: #F9B725;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Open Sans";
 }
 
 body {
@@ -67,12 +68,19 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+
+}
+
 input,
 button,
 textarea,
 select {
   outline: none;
   border: none;
+  margin: 0;
+  
 }
   
 
