@@ -5,7 +5,16 @@
   background-color: #f0f0f0;
 }
 
-.dashboard-pedidos .page {
+.dashboard-pedidos a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active {
+  background: #783FA6;
+}
+
+.page {
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -25,7 +34,236 @@
   background-color: var(--roxo-vaptroxo-vapt-900);
 }
 
-.dashboard-pedidos .body {
+.div-2:hover,
+.div-2:focus {
+  border-radius: 0.5rem;
+  background: #572B6A;
+}
+
+.menu-button-group:hover,
+.menu-button-group:focus {
+  border-radius: 0.5rem;
+  background: #572B6A;
+}
+
+.menu-button-single:hover,
+.menu-button-single:focus{
+  border-radius: 0.5rem;
+  background: #572B6A;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.logo-branco {
+  position: relative;
+  width: 119.04px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.section-painel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+  background-color: var(--roxo-vaptroxo-vapt-oficial);
+}
+
+.title {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.dashboard-pedidos .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Open Sans", Helvetica;
+  font-weight: 700;
+  color: var(--roxo-vaptroxo-vapt-100);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.menu-button-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.img {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.div {
+  flex: 1;
+  font-family: "Open Sans", Helvetica;
+  font-weight: 600;
+  color: var(--roxo-vaptroxo-vapt-100);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.logo-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.menu-button-single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.title-2 {
+  position: relative;
+  width: fit-content;
+  font-family: "Open Sans", Helvetica;
+  font-weight: 600;
+  color: var(--roxo-vaptroxo-vapt-300);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.side-bar-menu.collapsed {
+  width: 91px;
+  transition: width 0.3s;
+  animation-timing-function: ease-out;
+  animation-duration: 100ms;
+}
+
+.side-bar-menu.collapsed .logo-branco {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+  top: 2rem;
+}
+
+.side-bar-menu.collapsed .div-2,
+.side-bar-menu.collapsed .menu-button-group,
+.side-bar-menu.collapsed .text-wrapper,
+.side-bar-menu.collapsed .title,
+.side-bar-menu.collapsed .section-painel,
+.side-bar-menu.collapsed .line-sidebar,
+.side-bar-menu.collapsed .div {
+  display: none;
+}
+
+.side-bar-menu.collapsed .logo-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 91%;
+  padding-bottom: 16px;
+}
+
+.side-bar-menu.collapsed .img {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.side-bar-menu.collapsed .menu-button-single .title-2 {
+  display: none;
+}
+
+.side-bar-menu.collapsed .logo-2 .div-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.side-bar-menu.collapsed .logo-2 .menu-button-single {
+  justify-content: center;
+}
+
+.side-bar-menu.collapsed .div-2:hover,
+.side-bar-menu.collapsed .menu-button-single:hover {
+  background: #783FA6;
+  border-radius: 8px;
+}
+
+.body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -40,7 +278,7 @@
 
 .dashboard-pedidos .linha {
   display: flex;
-  justify-content: space-between; /* Ajusta o espaço entre os itens */
+  justify-content: space-between;
   gap: 16px;
   width: 100%;
 }
@@ -150,6 +388,7 @@
   line-height: var (--t-tulos-pequenos-line-height);
   font-style: var (--t-tulos-pequenos-font-style);
 }
+
 .element {
   position: relative;
   flex: 1;
@@ -193,6 +432,7 @@
   line-height: normal;
   text-transform: uppercase;
 }
+
 .element-2 {
   position: relative;
   flex: 1;
@@ -217,6 +457,7 @@
   flex: 1;
   flex-grow: 1;
 }
+
  .linha-banners {
   flex-direction: column;
   gap: 16px;
@@ -227,7 +468,8 @@
   align-self: stretch;
   width: 100%;
 }
- .banner {
+
+.banner {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -284,7 +526,6 @@
   overflow: hidden;
   box-shadow: var(--dropshadow);
 }
-
 
 .card-2 {
   display: flex;
@@ -372,7 +613,7 @@
   align-items: center;
   gap: 8px;
   border: none;
-  padding: 2px;
+  padding: 0px;
   position: relative;
   flex: 1;
   flex-grow: 1;
@@ -442,12 +683,14 @@
 .button-3 {
   background-color: #eeedff;
   border-color: #ccc;
+  padding: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .button-4 {
   background-color: var(--roxo-vaptroxo-vapt-600);
   border-color: var(--roxo-vaptroxo-vapt-600);
+  padding: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   color: white;
 }

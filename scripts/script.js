@@ -6,7 +6,7 @@ $(document).ready(function() {
   });
 
   $('.datepicker').on('show', function() {
-    $('.datepicker-dropdown').css('margin-top', '15px', 'margin-left', '3px');
+    $('.datepicker-dropdown').css('margin-top', '10px', 'margin-left', '3px');
   });
 
   $('.datepicker-button').click(function() {
@@ -17,15 +17,15 @@ $(document).ready(function() {
 
   pedidoButtons.forEach(button => {
     button.addEventListener('click', function() {
-      if (this.classList.contains('active')) {
-        this.classList.remove('active', 'disabled');
+      if (this.classList.contains('active-pedido')) {
+        this.classList.remove('active-pedido', 'disabled');
         this.disabled = false;
       } else {
         pedidoButtons.forEach(btn => {
-          btn.classList.remove('active', 'disabled');
+          btn.classList.remove('active-pedido', 'disabled');
           btn.disabled = false;
         });
-        this.classList.add('active', 'disabled');
+        this.classList.add('active-pedido', 'disabled');
         this.disabled = true;
       }
     });
@@ -142,4 +142,48 @@ $(document).ready(function() {
     modal.find('#modal-recebedor').text(pedido.nome);
     modal.find('#modal-documento').text('254.457.703-57'); 
   });
+
+  const sidebarButtons = document.querySelectorAll('.div-2, .menu-button-group');
+
+  sidebarButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      if (this.classList.contains('active')) {
+        this.classList.remove('active');
+      } else {
+        sidebarButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+      }
+    });
+  });
+
+  const menuButton = document.querySelector('.menu-button-single');
+  const sideBarMenu = document.querySelector('.side-bar-menu');
+  const engrenagemButton = document.querySelector('.engrenagem-icon');
+  const dashboardButton = document.querySelector('#dashboard-button');
+  const pedidoButton = document.querySelector('#pedido-button');
+
+  menuButton.addEventListener('click', function() {
+    sideBarMenu.classList.toggle('collapsed');
+  });
+
+  engrenagemButton.addEventListener('click', function() {
+    sideBarMenu.classList.remove('collapsed');
+  });
+
+  dashboardButton.addEventListener('click', function() {
+    dashboardButton.classList.add('active');
+    pedidoButton.classList.remove('active');
+  });
+
+  pedidoButton.addEventListener('click', function() {
+    pedidoButton.classList.add('active');
+    dashboardButton.classList.remove('active');
+  });
+
+  if (window.location.pathname.includes('dashboard.php')) {
+    dashboardButton.classList.add('active');
+  } else if (window.location.pathname.includes('pedido.php')) {
+    pedidoButton.classList.add('active');
+  } 
+
 });
