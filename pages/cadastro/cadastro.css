@@ -1,0 +1,675 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar-menu a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.side-bar-menu a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 3rem;
+}
+
+.collapse-icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.active-b {
+  background: #783FA6;
+}
+
+.side-bar-menu {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  z-index: 1000;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  transition: all .25s ease-in-out;
+  background-color: var(--roxo-vaptroxo-vapt-900);
+}
+
+.div-2:hover,
+.div-2:focus {
+  border-radius: 0.5rem;
+  background: #572B6A;
+}
+
+.menu-button-group:hover,
+.menu-button-group:focus {
+  border-radius: 0.5rem;
+  background: #572B6A;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-button-single:hover,
+.menu-button-single:focus {
+  border-radius: 0.5rem;
+  background: #572B6A;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.logo-branco {
+  position: relative;
+  width: 119.04px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.section-painel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+  background-color: var(--roxo-vaptroxo-vapt-oficial);
+}
+
+.title {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Open Sans", Helvetica;
+  font-weight: 700;
+  color: var(--roxo-vaptroxo-vapt-100);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.menu-button-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.img {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.div {
+  flex: 1;
+  font-family: "Open Sans", Helvetica;
+  font-weight: 600;
+  color: var(--roxo-vaptroxo-vapt-100);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.logo-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.menu-button-single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.title-2 {
+  position: relative;
+  width: fit-content;
+  font-family: "Open Sans", Helvetica;
+  font-weight: 600;
+  color: var(--roxo-vaptroxo-vapt-300);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.side-bar-menu.collapsed {
+  width: 91px;
+  transition: width 0.3s;
+  animation-timing-function: ease-out;
+  animation-duration: 100ms;
+}
+
+.side-bar-menu.collapsed .logo-branco {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+  top: 2rem;
+}
+
+.side-bar-menu.collapsed .div-2,
+.side-bar-menu.collapsed .menu-button-group,
+.side-bar-menu.collapsed .text-wrapper,
+.side-bar-menu.collapsed .title,
+.side-bar-menu.collapsed .section-painel,
+.side-bar-menu.collapsed .line-sidebar,
+.side-bar-menu.collapsed .div {
+  display: none;
+}
+
+.side-bar-menu.collapsed .logo-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+}
+
+.side-bar-menu.collapsed .img {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.side-bar-menu.collapsed .menu-button-single .title-2 {
+  display: none;
+}
+
+.side-bar-menu.collapsed .logo-2 .div-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 42rem;
+}
+
+.side-bar-menu.collapsed .logo-2 .menu-button-single {
+  justify-content: center;
+}
+
+.side-bar-menu.collapsed .div-2:hover,
+.side-bar-menu.collapsed .menu-button-single:hover {
+  background: #783FA6;
+  border-radius: 8px;
+}
+
+.line-sidebar {
+  width: 13rem;
+  height: 0.0625rem;
+  background: #653074;
+  margin: 20px 0;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  background-color: #f0f0f0;
+}
+
+.sidebar-link {
+  padding: .625rem 3.625rem;
+  color: #FFF;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+
+.form-group input.form-control {
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+
+.form-group input::placeholder {
+  text-indent: 0px;
+}
+
+
+.form-group .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+.select::placeholder {
+  text-indent: 1px;
+}
+
+.form-group .form-control {
+
+  flex: 1;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.div-icon {
+  position: absolute;
+  margin-top: 0.625rem;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.form-group select.form-control {
+  padding-left: 40px;
+  position: relative;
+}
+
+.form-group .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-password-eyes {
+  position: relative;
+  top: -32px;
+  left: 27rem;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.close {
+  font-size: 1.5rem;
+}
+
+.modal {
+  padding: 0px;
+  top: 76px;
+  left: 117px;
+}
+
+.img-user {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.excel-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.button-exportar {
+  padding: 0.6rem 1rem;
+  margin-top: 10px;
+  border: none;
+  border-radius: 0.25rem;
+  background: var(--Amarelo-Vapt-Amarelo-Vapt-OFICIAL, #F9B725);
+  cursor: pointer;
+
+  font-family: "Open Sans";
+  color: var(--Roxo-Vapt-Roxo-Vapt-OFICIAL, #3E2155);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.button-criaruser {
+  padding: 0.6rem 1rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--Roxo-Vapt-Roxo-Vapt-OFICIAL, #3E2155);
+  cursor: pointer;
+
+  font-family: "Open Sans";
+  color: #fff;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.button-criaruser:hover {
+  background-color: #572B6A;
+  opacity: 4;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#user-cadastro {
+  color: var(--Roxo-Vapt-Roxo-Vapt-OFICIAL, #3E2155);
+
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  margin-top: 1rem;
+}
+
+.table-mt {
+  margin-top: 2rem;
+}
+
+.cabecalho {
+  color: #ffffff;
+  font-family: var(--t-tulos-pequenos-em-BOLD-font-family);
+  font-size: var(--t-tulos-pequenos-em-BOLD-font-size);
+  line-height: var(--t-tulos-pequenos-em-BOLD-line-height);
+  border-bottom: 1px solid #979797;
+}
+
+table td {
+  padding: 1.375rem;
+  border-bottom: 1px solid #b3b3b3;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: var(--roxo-vaptroxo-vapt-700);
+  font-size: 0.80rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.table td,
+.table th {
+  padding: .75rem;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+}
+
+tr {
+  padding: 5px;
+}
+
+.placa-carreta {
+  text-align: center;
+}
+
+th,
+td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+table th {
+  background-color: var(--Roxo-Vapt-Roxo-Vapt-OFICIAL, #3E2155);
+  color: white;
+  border-radius: 1px;
+}
+
+.tables1 td {
+  border-right: 1px solid #dee2e6;
+}
+
+table td:last-child,
+table th:last-child {
+  border-right: none;
+}
+
+tr {
+  background-color: #fff;
+  padding: 4rme;
+}
+
+.plus-icon {
+  color: #4b0e5c;
+  font-weight: bold;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -24px;
+  margin-left: -27px;
+}
+
+.input-3 {
+  display: flex;
+  flex-direction: column;
+  width: 457px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 4rem;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  margin-bottom: -1px;
+  margin-left: -1px;
+  margin-right: -1px;
+  background-color: var(--gray-0210);
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: var(--gray-0250);
+  box-shadow: var(--shadow-2);
+}
+
+label {
+  color: var(--Roxo-Vapt-Roxo-Vapt-OFICIAL, #572B6A);
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: -0.5rem;
+  margin-left: 3px;
+}
+
+.pagination-controls {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-link {
+  background-color: var(--Roxo-Vapt-Roxo-Vapt-600, #572B6A);
+  color: white;
+  text-decoration: none;
+}
+
+.page-link {
+  margin: 0 5px;
+  background: var(--Roxo-Vapt-Roxo-Vapt-600, #74377D);
+}
+
+.pagination-controls a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.page-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.pagination-controls a:hover {
+  background-color: #a1bfc0;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: var(--pagination);
+}
+
+.page-item.active .page-link:focus {
+  z-index: 3;
+  color: #fff;
+  background-color: var(--pagination);
+
+}
+
+.div-radape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-rodape {
+  color: var(--Roxo-Vapt-Roxo-Vapt-OFICIAL, #3E2155);
+  font-size: 1;
+  margin-top: -2rem;
+}
+
+.modal-contented {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 183%;
+  height: 78vh;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.header-modal {
+  color: var(--Roxo-Vapt-Roxo-Vapt-500, #7F3B84);
+  font-family: "Open Sans";
+  font-size: 1.50rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+}
+
+.editModal {
+  left: -7rem;
+}

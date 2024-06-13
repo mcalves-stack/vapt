@@ -34,8 +34,14 @@
           </div>
           <div class="div-2">
             <img class="img" src="../../img/feather-icons-file-1.svg" />
-            <a class="div">Cadastros</a>
-            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+            <a href="#" class="div collapse-toggle" data-toggle="collapse" data-target="#cadastrosSubmenu" aria-expanded="false" aria-controls="cadastrosSubmenu">Cadastros</a>
+            <img class="img collapse-icon" src="../../img/feather-icons-chevron-down-1.svg" id="cadastros-icon" />
+          </div>
+          <div class="collapse" id="cadastrosSubmenu">
+            <div class="sub-menu">
+              <a class="div" href="#" data-toggle="modal" data-target="#createUserModal">Alterar Senha</a>
+              <a class="div" href="/vapt/pages/cadastro/cadastro.php">Usuário</a>
+            </div>
           </div>
           <div class="div-2 active">
             <img class="img" src="../../img/feather-icons-box-2.svg" />
@@ -71,8 +77,14 @@
           </div>
           <div class="div-2">
             <img class="img" src="../../img/feather-icons-grid-1.svg" />
-            <div class="div">Relatórios</div>
-            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+            <a href="#" class="div collapse-toggle" data-toggle="collapse" data-target="#relatoriosSubmenu" aria-expanded="false" aria-controls="relatoriosSubmenu">Relatórios</a>
+            <img class="img collapse-icon" src="../../img/feather-icons-chevron-down-1.svg" />
+          </div>
+          <div class="collapse" id="relatoriosSubmenu">
+            <div class="sub-menu">
+              <a class="div" href="/vapt/pages/relatorios/PedidoDetalhes/pedidodetalhes.php">Pedido Detalhes</a>
+              <a class="div" href="/vapt/pages/relatorios/estoque/estoque.php">Estoque</a>
+            </div>
           </div>
         </div>
         <div class="line-sidebar"></div>
@@ -117,7 +129,6 @@
           <div class="input">
             <label class="text-wrapper-4">TIPO VEÍCULO:</label>
             <input type="text" placeholder="Selecione" class="select" name="" id="">
-            <img class="icone-baixo" src="../../img/caretdown-2.svg" alt="">
           </div>
         </div>
         <div class="frame">
@@ -154,111 +165,71 @@
         <div class="text-wrapper-5">Observações</div>
         <textarea class="textearea"></textarea>
         <div class="frame-3">
-          <button class="salvarbutton">Salvar <img id="save" src="../../img/save.svg" alt=""></button>
-          <div class="buttons-save "><img class="feather-icons-corner" src="../../img/corner-up-left.svg" /></div>
+          <button class="salvarbutton btn btn-outline-primary">Salvar <img id="save" src="../../img/save.svg" alt=""></button>
         </div>
         <div class="table">
           <div class="frame-4">
-            <button class="div-wrapper">EXPORTAR EXCEL</button>
+            <button class="button-exportar">EXPORTAR EXCEL</button>
             <div class="input-3">
-              <label class="text-wrapper-6">NF-e:</labv>
-                <input class="select" placeholder="Digite aqui">
+              <label class="text-wrapper-6">NF-e:</label>
+              <input class="form-control select" placeholder="Digite aqui">
             </div>
           </div>
-          <div class="tabela">
-            <div class="cabecalho">
-              <div class="frame-6">
-                <div class="text-wrapper-7">REC</div>
-              </div>
-              <div class="frame-6">
-                <div class="text-wrapper-7">HUB</div>
-              </div>
-              <div class="frame-7">
-                <div class="text-wrapper-7">CNPJ HUB</div>
-              </div>
-              <div class="frame-8">
-                <div class="text-wrapper-8">CLIENTE</div>
-              </div>
-              <div class="frame-7">
-                <div class="text-wrapper-7">CNPJ</div>
-              </div>
-              <div class="frame-9">
-                <div class="text-wrapper-7">TIPO VEÍCULO</div>
-              </div>
-              <div class="frame-9">
-                <div class="text-wrapper-7">TIPO ENTRADA</div>
-              </div>
-              <div class="status-wrapper">
-                <div class="text-wrapper-7">STATUS</div>
-              </div>
-              <div class="frame-8">
-                <div class="text-wrapper-8">TRANSPORTADORA</div>
-              </div>
-              <div class="frame-10">
-                <div class="text-wrapper-7">PLACA CAVALO</div>
-              </div>
-              <div class="placa-carreta-wrapper">
-                <div class="text-wrapper-7">PLACA CARRETA</div>
-              </div>
-              <div class="frame-10">
-                <div class="text-wrapper-7">MOTORISTA</div>
-              </div>
-            </div>
-            <div class="linha">
-              <div class="feather-icons-plus-wrapper"><img class="img-2" src="../../img/plus.svg" /></div>
-              <div class="element-wrapper">
-                <div class="text-wrapper-9">117</div>
-              </div>
-              <div class="element-wrapper">
-                <div class="element">1</div>
-              </div>
-              <div class="frame-11">
-                <div class="text-wrapper-9">00.000.000/0000-00</div>
-              </div>
-              <div class="frame-12">
-                <div class="text-wrapper-10">CENTRO DE TECNOLOGIA ELEMENTS</div>
-              </div>
-              <div class="frame-11">
-                <div class="text-wrapper-9">00.000.000/0000-00</div>
-              </div>
-              <div class="frame-13">
-                <div class="text-wrapper-9">-</div>
-              </div>
-              <div class="frame-13">
-                <div class="text-wrapper-9">FULFILLMENT</div>
-              </div>
-              <div class="frame-14">
-                <div class="text-wrapper-9">PENDENTE</div>
-              </div>
-              <div class="frame-12">
-                <div class="text-wrapper-10">-</div>
-              </div>
-              <div class="frame-15">
-                <div class="text-wrapper-9">N/A</div>
-              </div>
-              <div class="frame-15">
-                <div class="text-wrapper-9">-</div>
-              </div>
-              <div class="frame-15">
-                <div class="text-wrapper-9">N/A</div>
-              </div>
-            </div>
+          <div class="table-responsive">
+            <table class="mt-2">
+              <thead class="cabecalho">
+                <tr>
+                  <th></th>
+                  <th>REC</th>
+                  <th>HUB</th>
+                  <th>CNPJ HUB</th>
+                  <th>CLIENTE</th>
+                  <th>CNPJ</th>
+                  <th>TIPO VEÍCULO</th>
+                  <th>TIPO ENTRADA</th>
+                  <th>STATUS</th>
+                  <th>TRANSPORTADORA</th>
+                  <th>PLACA CAVALO</th>
+                  <th>PLACA CARRETA</th>
+                  <th>MOTORISTA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="plus-icon">+</span></td>
+                  <td>117</td>
+                  <td>1</td>
+                  <td>00.000.000/0000-00</td>
+                  <td>CENTRO DE TECNOLOGIA ELEMENTS</td>
+                  <td>00.000.000/0000-00</td>
+                  <td>Texto</td>
+                  <td>FULFILLMENT</td>
+                  <td>PENDENTE</td>
+                  <td>-</td>
+                  <td>N/A</td>
+                  <td class="placa-carreta">-</td>
+                  <td>N/A</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../../scripts/script.js"></script>
-  <script src="../../pages/dashboard/dados.php"></script>
-  <script src="../../scripts/input-file.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../scripts/script.js"></script>
+    <script src="../../scripts/filter.js"></script>
+
+    <script src="../../pages/dashboard/dados.php"></script>
+    <script src="../../scripts/input-file.js"></script>
+
 </body>
 
 </html>

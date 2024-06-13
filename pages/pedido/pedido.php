@@ -34,8 +34,14 @@
           </div>
           <div class="div-2">
             <img class="img" src="../../img/feather-icons-file-1.svg" />
-            <a class="div">Cadastros</a>
-            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+            <a href="#" class="div collapse-toggle" data-toggle="collapse" data-target="#cadastrosSubmenu" aria-expanded="false" aria-controls="cadastrosSubmenu">Cadastros</a>
+            <img class="img collapse-icon" src="../../img/feather-icons-chevron-down-1.svg" id="cadastros-icon" />
+          </div>
+          <div class="collapse" id="cadastrosSubmenu">
+            <div class="sub-menu">
+              <a class="div" href="#" data-toggle="modal" data-target="#createUserModal">Alterar Senha</a>
+              <a class="div" href="/vapt/pages/cadastro/cadastro.php">Usuário</a>
+            </div>
           </div>
           <div class="div-2">
             <img class="img" src="../../img/feather-icons-box-2.svg" />
@@ -71,8 +77,14 @@
           </div>
           <div class="div-2">
             <img class="img" src="../../img/feather-icons-grid-1.svg" />
-            <div class="div">Relatórios</div>
-            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+            <a href="#" class="div collapse-toggle" data-toggle="collapse" data-target="#relatoriosSubmenu" aria-expanded="false" aria-controls="relatoriosSubmenu">Relatórios</a>
+            <img class="img collapse-icon" src="../../img/feather-icons-chevron-down-1.svg" />
+          </div>
+          <div class="collapse" id="relatoriosSubmenu">
+            <div class="sub-menu">
+              <a class="div" href="/vapt/pages/relatorios/PedidoDetalhes/pedidodetalhes.php">Pedido Detalhes</a>
+              <a class="div" href="/vapt/pages/relatorios/estoque/estoque.php">Estoque</a>
+            </div>
           </div>
         </div>
         <div class="line-sidebar"></div>
@@ -88,7 +100,7 @@
         </div>
       </div>
       <div class="container-fluid  body">
-        <div class="text-wrapper-2">Novo pedido</div>
+        <div class="text-wrapper-2">Novo Pedido</div>
         <div class="frame">
           <div class="input">
             <label class="text-wrapper-4">CNPJ</label>
@@ -114,10 +126,10 @@
         </div>
         <div class="text-wrapper-5">Observações</div>
         <textarea class="select-5"></textarea>
-        <button class="div-wrapper">EXPORTAR EXCEL</button>
+        <div class="title-registro"><span class="text-title-register">Pedidos Registrados</span></div>
         <div class="table">
           <div class="frame-2">
-            <div class="text-wrapper-6">Pedidos já registrados</div>
+            <button class="button-exportar">EXPORTAR EXCEL</button>
             <div class="input-2">
               <div class="text-wrapper-7">NF-e:</div>
               <div class="select">

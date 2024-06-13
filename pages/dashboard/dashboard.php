@@ -18,69 +18,87 @@
 <body>
   <div class="dashboard-pedidos">
     <div class="page">
-    <div class="side-bar-menu">
-          <div class="logo"><img class="logo-branco" src="../../img/logo-branco-1.png" /></div>
-          <div class="line-sidebar"></div>
-          <div class="section-painel">
-            <div class="title"><div class="text-wrapper">PAINEL</div></div>
-            <div class="menu-button-group active">
-              <img class="img" src="../../img/feather-icons-settings-7.svg" />
-              <a class="div">Dashboard</a>
-            </div>
-            <div class="title"><div class="text-wrapper">APLICAÇÃO</div></div>
-            <div class="div-2">
-              <img class="img" src="../../img/feather-icons-file-1.svg" />
-              <a class="div">Cadastros</a>
-              <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
-            </div>
-            <div class="div-2">
-              <img class="img" src="../../img/feather-icons-box-2.svg" />
-              <a href="/vapt/pages/recebimento/recebimento.php" class="div">Recebimento</a>
-              <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
-            </div>
-            <div class="div-2">
-              <img class="img" src="../../img/feather-icons-shopping-bag-1.svg" />
-              <a href="/vapt/pages/pedido/pedido.php" class="div">Pedido</a>
-              <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
-            </div>
-            <div class="div-2">
-              <img class="img" src="../../img/feather-icons-rotate-ccw-2.svg" />
-              <a class="div">Reversa</a>
-              <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
-            </div>
-            <div class="div-2">
-              <img class="img" src="../../img/feather-icons-truck-1.svg" />
-              <a class="div">Transporte</a>
-              <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
-            </div>
-            <div class="div-2">
-              <img class="img" src="../../img/feather-icons-dollar-sign-1.svg" />
-              <a class="div">Financeiro</a>
-              <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
-            </div>
-            <a class="title"><div class="text-wrapper">RELATÓRIOS</div></a>
-            <div class="div-2">
-              <img class="img" src="../../img/feather-icons-pie-chart-2.svg" />
-              <a class="div">Powerbi</a>
-            </div>
-            <div class="div-2">
-              <img class="img" src="../../img/feather-icons-grid-1.svg" />
-              <div class="div">Relatórios</div>
-              <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+      <div class="side-bar-menu">
+        <div class="logo"><img class="logo-branco" src="../../img/logo-branco-1.png" /></div>
+        <div class="line-sidebar"></div>
+        <div class="section-painel">
+          <div class="title">
+            <div class="text-wrapper">PAINEL</div>
+          </div>
+          <div class="menu-button-group active">
+            <img class="img" src="../../img/feather-icons-settings-7.svg" />
+            <a class="div">Dashboard</a>
+          </div>
+          <div class="title">
+            <div class="text-wrapper">APLICAÇÃO</div>
+          </div>
+          <div class="div-2">
+            <img class="img" src="../../img/feather-icons-file-1.svg" />
+            <a href="#" class="div collapse-toggle" data-toggle="collapse" data-target="#cadastrosSubmenu" aria-expanded="false" aria-controls="cadastrosSubmenu">Cadastros</a>
+            <img class="img collapse-icon" src="../../img/feather-icons-chevron-down-1.svg" id="cadastros-icon" />
+          </div>
+          <div class="collapse" id="cadastrosSubmenu">
+            <div class="sub-menu">
+              <a class="div" href="#" data-toggle="modal" data-target="#createUserModal">Alterar Senha</a>
+              <a class="div" href="/vapt/pages/cadastro/cadastro.php">Usuário</a>
             </div>
           </div>
-          <div class="line-sidebar"></div>
-          <div class="logo-2">
-            <div class="div-2">
-              <img class="img engrenagem-icon" src="../../img/feather-icons-settings-8.svg" />
-              <a class="div">Configurações</a>
-            </div>
-            <div class="menu-button-single">
-              <img class="img" src="../../img/feather-icons-chevrons-left-1.svg" />
-              <div class="title-2">Esconder Menu</div>
+          <div class="div-2">
+            <img class="img" src="../../img/feather-icons-box-2.svg" />
+            <a href="/vapt/pages/recebimento/recebimento.php" class="div">Recebimento</a>
+            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+          </div>
+          <div class="div-2">
+            <img class="img" src="../../img/feather-icons-shopping-bag-1.svg" />
+            <a href="/vapt/pages/pedido/pedido.php" class="div">Pedido</a>
+            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+          </div>
+          <div class="div-2">
+            <img class="img" src="../../img/feather-icons-rotate-ccw-2.svg" />
+            <a class="div">Reversa</a>
+            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+          </div>
+          <div class="div-2">
+            <img class="img" src="../../img/feather-icons-truck-1.svg" />
+            <a class="div">Transporte</a>
+            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+          </div>
+          <div class="div-2">
+            <img class="img" src="../../img/feather-icons-dollar-sign-1.svg" />
+            <a class="div">Financeiro</a>
+            <img class="img" src="../../img/feather-icons-chevron-down-1.svg" />
+          </div>
+          <a class="title">
+            <div class="text-wrapper">RELATÓRIOS</div>
+          </a>
+          <div class="div-2">
+            <img class="img" src="../../img/feather-icons-pie-chart-2.svg" />
+            <a class="div">Powerbi</a>
+          </div>
+          <div class="div-2">
+            <img class="img" src="../../img/feather-icons-grid-1.svg" />
+            <a href="#" class="div collapse-toggle" data-toggle="collapse" data-target="#relatoriosSubmenu" aria-expanded="false" aria-controls="relatoriosSubmenu">Relatórios</a>
+            <img class="img collapse-icon" src="../../img/feather-icons-chevron-down-1.svg" />
+          </div>
+          <div class="collapse" id="relatoriosSubmenu">
+            <div class="sub-menu">
+              <a class="div" href="/vapt/pages/relatorios/PedidoDetalhes/pedidodetalhes.php">Pedido Detalhes</a>
+              <a class="div" href="/vapt/pages/relatorios/estoque/estoque.php">Estoque</a>
             </div>
           </div>
         </div>
+        <div class="line-sidebar"></div>
+        <div class="logo-2">
+          <div class="div-2">
+            <img class="img engrenagem-icon" src="../../img/feather-icons-settings-8.svg" />
+            <a class="div">Configurações</a>
+          </div>
+          <div class="menu-button-single">
+            <img class="img" src="../../img/feather-icons-chevrons-left-1.svg" />
+            <div class="title-2">Esconder Menu</div>
+          </div>
+        </div>
+      </div>
       <div class="body">
         <div class="linha">
           <div class="coluna">
@@ -155,13 +173,13 @@
             <div class="input">
               <div class="text-wrapper-9">NF-e:</div>
               <div class="select">
-                <input class="select-wrapper" type="text" placeholder="Digite aqui">
+                <input class="select-wrapper" id="nf-input" type="text" placeholder="Digite aqui">
                 <button class="datepicker-button"></button>
               </div>
             </div>
             <div class="frame-4">
-              <button class="button-3"><img class="img-2" src="../../img/feather-icons-rotate-ccw-3.svg" /></button>
-              <button class="button-4"><img class="img-2" src="../../img/feather-icons-search-1.svg" /></button>
+              <button class="button-3" id="reset-filters"><img class="img-2" src="../../img/feather-icons-rotate-ccw-3.svg" /></button>
+              <button class="button-4" id="apply-filters"><img class="img-2" src="../../img/feather-icons-search-1.svg" /></button>
             </div>
           </div>
         </div>
@@ -198,7 +216,9 @@
         <div class="modal-body p-5">
           <div class="d-flex flex-row justify-content-between">
             <h2 class="pedido-id">Pedido 001</h2>
-            <div class="div-rota d-flex justify-content-center"><h1 class="text-wrapper">Rota de Entrega</h1></div>
+            <div class="div-rota d-flex justify-content-center">
+              <h1 class="text-wrapper">Rota de Entrega</h1>
+            </div>
           </div>
           <div class="d-flex flex-row pt-4">
             <div>
@@ -210,7 +230,8 @@
             <div>
               <p class="p-modal"><strong>Cliente:</strong><span id="modal-span">Cliente 01</span></p>
               <p class="p-modal"><strong>Quantidade:</strong><span id="modal-span"></span></p>
-              <p class="p-modal"><strong>Entrega prevista:</strong><span id="modal-span">xx/xx/xxxx</spa></p>
+              <p class="p-modal"><strong>Entrega prevista:</strong><span id="modal-span">xx/xx/xxxx</spa>
+              </p>
             </div>
           </div>
           <div class="custom-line"></div>
@@ -221,7 +242,9 @@
           <p class="p-modal"><strong>expedição:</strong><span id="modal-span">xxxxxxxx</span></p>
           <p class="p-modal"><strong>entrega:</strong><span id="modal-span">xx/xx/xxxx</span></p>
           <div class="custom-line"></div>
-          <div class="div-title-map"><img src="../../img/map-pin.svg" class="map-pin" alt="map pin"><p class="p-map-modal"><strong class="strong-pin">Latitude / Longitude:</strong><span>3254851/526546</span></p></div>
+          <div class="div-title-map"><img src="../../img/map-pin.svg" class="map-pin" alt="map pin">
+            <p class="p-map-modal"><strong class="strong-pin">Latitude / Longitude:</strong><span>3254851/526546</span></p>
+          </div>
           <div class="map"></div>
           <p class="p-modal"><strong>Recebedor:</strong><span id="modal-span">Darrin Rempel</span></p>
           <p class="p-modal"><strong>Documento:</strong><span id="modal-span">254.457.703-57</span></p>
@@ -238,6 +261,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../../scripts/script.js"></script>
+  <script src="../../scripts/filter.js"></script>
 </body>
 
 </html>

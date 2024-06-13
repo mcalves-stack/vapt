@@ -10,6 +10,27 @@
   cursor: pointer;
 }
 
+.dashboard-pedidos a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 3rem;
+}
+
+.collapse-icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 .active {
   background: #783FA6;
 }
@@ -1266,4 +1287,8 @@ strong {
   height: 0.0625rem;
   background: #653074;
   margin: 20px 0;
+}
+
+.active-pedido {
+  background: #783FA6;
 }
