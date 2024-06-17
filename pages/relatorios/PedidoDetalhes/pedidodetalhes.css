@@ -391,8 +391,8 @@ table td {
   vertical-align: middle;
 }
 
-.table td, .table th {
-  padding: .75rem;
+.table td{
+  padding: 1.75rem;
   vertical-align: middle;
   border-top: 1px solid #dee2e6;
 }
@@ -417,15 +417,12 @@ td {
   border-radius: 1px;
 }
 
-.tables1 td {
-  border-right: 1px solid #dee2e6; 
-}
 
 table td:last-child, table th:last-child {
   border-right: none;
 }
 
-tr:nth-child(odd) {
+tr {
   background-color: #fff;
   padding: 4rme;
 }
@@ -447,51 +444,6 @@ label {
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-}
-
-.pagination-controls {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-}
-
-.page-link {
-  background-color: var(--Roxo-Vapt-Roxo-Vapt-600, #572B6A);
-  color: white;
-  text-decoration: none;
-}
-
-.page-link {
-  margin: 0 5px;
-  background: var(--Roxo-Vapt-Roxo-Vapt-600, #74377D);
-}
-
-.pagination-controls a {
-  display: block;
-  padding: 8px 12px;
-  text-decoration: none;
-}
-
-.page-link:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.pagination-controls a:hover {
-  background-color: #a1bfc0;
-}
-
-.page-item.active .page-link {
-  z-index: 3;
-  color: #fff;
-  background-color: var(--pagination);
-}
-
-.page-item.active .page-link:focus {
-  z-index: 3;
-  color: #fff;
-  background-color: var(--pagination);
-
 }
 
 .div-radape {
@@ -618,8 +570,8 @@ label {
 }
 
 .datepicker-dropdown {
-  margin-left: 1.1px !important;
-  top: 215px !important;
+  margin-left: 0.1px !important;
+  top: 178px !important;
 }
 
 .datepicker-dropdown:before,
@@ -641,7 +593,7 @@ label {
 }
 
 .button-filter { 
-  padding: 0.6rem 1rem;
+  padding: 0.678rem 1rem;
   margin-top: 2rem;
   border: none;
   border-radius: 0.25rem;
@@ -655,4 +607,50 @@ label {
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.button-3,
+.button-4 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 4px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-3 {
+  background-color: #eeedff;
+  border-color: #ccc;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button-4 {
+  background-color: var(--roxo-vaptroxo-vapt-600);
+  border-color: var(--roxo-vaptroxo-vapt-600);
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.button-3:active,
+.button-4:active {
+  background-color: #ccc;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.button-4:active {
+  background-color: #b6aec0;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.button-3:focus,
+.button-4:focus {
+  outline: none;
 }

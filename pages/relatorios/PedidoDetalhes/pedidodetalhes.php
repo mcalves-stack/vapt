@@ -15,6 +15,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <link rel="stylesheet" href="../../../globals.css" />
+  <link rel="stylesheet" href="../../../lib/datables/dataTables.css" />
   <link rel="stylesheet" href="pedidodetalhes.css" />
 </head>
 
@@ -107,10 +108,12 @@
         <div class="input">
           <label class="text-wrapper-4">DATA Inicio</label>
           <input class="select datepicker" type="text" placeholder="DD/MM/AAAA" id="date-start">
+          <button class="datepicker-button"><img class="calender" src="../../../img/calendar.svg" alt="" srcset=""></button>
         </div>
         <div class="input">
           <label class="text-wrapper-4">DATA FIM</label>
           <input class="select datepicker" type="text" placeholder="DD/MM/AAAA" id="date-end">
+          <button class="datepicker-button"><img class="calender" src="../../../img/calendar.svg" alt="" srcset=""></button>
         </div>
         <div class="input">
           <label class="text-wrapper-4">NF-E</label>
@@ -120,22 +123,19 @@
           <label class="text-wrapper-4">Pedido</label>
           <input type="text" class="select" id="pedido-input">
         </div>
-        <button id="apply-filters" class="button-filter">Aplicar Filtros</button>
-        <button id="reset-filters" class="button-filter">Resetar Filtros</button>
+        <div class="frame-4">
+          <button class="button-3" id="reset-filters"><img class="img-2" src="../../../img/feather-icons-rotate-ccw-3.svg" /></button>
+          <button class="button-4" id="apply-filters"><img class="img-2" src="../../../img/feather-icons-search-1.svg" /></button>
+        </div>
       </div>
       <div class="table">
         <div class="excel-input">
           <div>
             <button class="button-exportar">EXPORTAR EXCEL</button>
           </div>
-          <div class="input-3">
-            <div class="select">
-              <input placeholder="Digite aqui" class="select-wrapper">
-            </div>
-          </div>
         </div>
         <div class="table-responsive">
-          <table class="mt-2 table" id="pedidosTable">
+          <table id="example" class="table" style="width:100%" class="mt-2">
             <thead class="cabecalho">
               <tr>
                 <th>Pedido</th>
@@ -205,15 +205,6 @@
               </tr>
             </tbody>
           </table>
-          <div class="m-1 mt-4 div-radape">
-            <div class="text-rodape">Mostrando de <span id="start-record">1</span> até <span id="end-record">10</span> de <span id="total-records">0</span> registros</div>
-            <ul class="pagination-controls pagination">
-              <li class="page-item"><a href="#" class="page-link" id="previous-page">Anterior</a></li>
-              <li class="page-item active" id="page-1"><a href="#" class="page-link">1</a></li>
-              <li class="page-item" id="page-2"><a href="#" class="page-link">2</a></li>
-              <li class="page-item"><a href="#" class="page-link" id="next-page">Seguinte</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -228,6 +219,9 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../../../scripts/script.js"></script>
   <script src="../../../scripts/filter.js"></script>
+
+  <script src="../../../scripts/tables.js"></script>
+  <script src="../../../lib/datables/dataTables.js"></script>
 </body>
 
 </html>

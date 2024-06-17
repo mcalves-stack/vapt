@@ -14,6 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
 
   <link rel="stylesheet" href="../../globals.css" />
+  <link rel="stylesheet" href="../../lib/datables/dataTables.css" />
   <link rel="stylesheet" href="cadastro.css" />
 </head>
 
@@ -109,14 +110,9 @@
               <button class="button-criaruser" data-toggle="modal" data-target="#createUserModal">CRIAR USUÁRIO</button>
               <button class="button-exportar">EXPORTAR EXCEL</button>
             </div>
-            <div class="input-3">
-              <div class="select">
-                <input placeholder="Digite aqui" class="select-wrapper">
-              </div>
-            </div>
           </div>
           <div class="table-responsive">
-            <table class="mt-2" id="pedidosTable">
+            <table id="example" class="tabela" style="width:100%">
               <thead class="cabecalho">
                 <tr>
                   <th>ID</th>
@@ -129,15 +125,6 @@
               <tbody id="table-body">
               </tbody>
             </table>
-            <div class="m-1 mt-4 div-radape">
-              <div class="text-rodape">Mostrando de <span id="start-record">1</span> até <span id="end-record">10</span> de <span id="total-records">0</span> registros</div>
-              <ul class="pagination-controls pagination">
-                <li class="page-item"><a href="#" class="page-link" id="previous-page">Anterior</a></li>
-                <li class="page-item active" id="page-1"><a href="#" class="page-link">1</a></li>
-                <li class="page-item" id="page-2"><a href="#" class="page-link">2</a></li>
-                <li class="page-item"><a href="#" class="page-link" id="next-page">Seguinte</a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -155,21 +142,21 @@
             <form>
               <div class="form-group">
                 <label for="senha-atual">Senha Atual</label>
-                <div class="div-icon"><img class="icon" src="../../img/password.svg" alt=""></div>
+                <img class="icon" src="../../img/cadeado.png" alt="">
                 <input type="password" class="form-control" id="senha-atual" placeholder="Digite sua senha atual">
-                <img class="icon-password-eyes" src="../../img/visible-fechado.svg" alt="">
+                <img class="icon-password-eyes" src="../../img/visible-fechado.png" alt="">
               </div>
               <div class="form-group">
                 <label for="nova-senha">Nova Senha</label>
-                <div class="div-icon"><img class="icon" src="../../img/password.svg" alt=""></div>
+                <img class="icon" src="../../img/cadeado.png" alt="">
                 <input type="password" class="form-control" id="nova-senha" placeholder="Digite sua nova senha">
-                <img class="icon-password-eyes" src="../../img/visible-fechado.svg" alt="">
+                <img class="icon-password-eyes" src="../../img/visible-fechado.png" alt="">
               </div>
               <div class="form-group">
                 <label for="repita-nova-senha">Repita a Nova Senha</label>
-                <div class="div-icon"><img class="icon" src="../../img/password.svg" alt=""></div>
+                <img class="icon" src="../../img/cadeado.png" alt="">
                 <input type="password" class="form-control" id="repita-nova-senha" placeholder="Repita a nova senha">
-                <img class="icon-password-eyes" src="../../img/visible-fechado.svg" alt="">
+                <img class="icon-password-eyes" src="../../img/visible-fechado.png" alt="">
               </div>
               <button type="submit" class="btn btn-primary">Alterar</button>
             </form>
@@ -209,16 +196,16 @@
               <div class="form-group">
                 <label for="senha">Senha</label>
                 <div class="div-icon">
-                  <img class="icon" src="../../img/password.svg" alt="">
+                  <img class="icon" src="../../img/cadeado.png" alt="">
                 </div>
                 <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
-                <img class="icon-password-eyes" src="../../img/visible-fechado.svg" alt="">
+                <img class="icon-password-eyes" src="../../img/visible-fechado.png" alt="">
               </div>
               <div class="form-group">
                 <label for="repita-senha">Repita a Senha</label>
-                <div class="div-icon"><img class="icon" src="../../img/password.svg" alt=""></div>
+                <div class="div-icon"><img class="icon" src="../../img/cadeado.png" alt=""></div>
                 <input type="password" class="form-control" id="repita-senha" placeholder="Repita a senha">
-                <img class="icon-password-eyes" src="../../img/visible-fechado.svg" alt="">
+                <img class="icon-password-eyes" src="../../img/visible-fechado.png" alt="">
               </div>
               <button type="submit" class="btn btn-primary">Adicionar</button>
             </form>
@@ -264,7 +251,7 @@
               </div>
               <div class="table table-mt">
                 <div class="table-responsive">
-                  <table class="mt-2 tables1">
+                  <table id="example" class="mt-2 tables1">
                     <thead class="cabecalho">
                       <tr>
                         <th>Usuario</th>
@@ -326,6 +313,12 @@
                     </tbody>
                   </table>
                 </div>
+              </div>
+              <div class="footer">
+                <button type="button" class="btn btn-primary">
+                  Adicionar
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -333,16 +326,19 @@
     </div>
     <div id="modal-container"></div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../../scripts/script.js"></script>
-    <script src="../../scripts/pagination.js"></script>
-    <script src="../../scripts/filter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="../../scripts/script.js"></script>
+  <script src="../../scripts/filter.js"></script>
+  <script src="../../scripts/user-data.js"></script>
+  <script src="../../scripts/tables.js"></script>
+  <script src="../../lib/datables/dataTables.js"></script>
 </body>
 
 </html>

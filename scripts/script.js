@@ -1,8 +1,8 @@
 $(document).ready(function () {
-  $('.collapse-toggle').each(function() {
+  $('.collapse-toggle').each(function () {
     var target = $(this).data('target');
     var icon = $(this).next('.collapse-icon');
-    
+
     $(target).on('show.bs.collapse', function () {
       icon.addClass('rotate');
     }).on('hide.bs.collapse', function () {
@@ -46,16 +46,12 @@ $(document).ready(function () {
   }
 
   $.getJSON("dados.php", function (data) {
+    console.log(data);
     let pedidosHtml = "";
     data.pedidos.forEach((pedido) => {
       pedidosHtml += `
-        <tr class="linha-3" data-toggle="modal" data-target="#detailsModal" data-pedido='${JSON.stringify(
-          pedido
-        )}'>
-          <td class="element-wrapper">${pedido.data_hora.replace(
-            " ",
-            "<br />"
-          )}</td>
+        <tr class="linha-3" data-toggle="modal" data-target="#detailsModal" data-pedido='${JSON.stringify(pedido)}'>
+          <td class="element-wrapper">${pedido.data_hora.replace(" ", "<br />")}</td>
           <td>${pedido.pedido}</td>
           <td>${pedido.nf_e}</td>
           <td>${pedido.status}</td>
@@ -63,13 +59,24 @@ $(document).ready(function () {
           <td>${pedido.qtd}</td>
           <td>${pedido.uf}</td>
           <td>${pedido.cidade}</td>
-          <td id="endereco">${pedido.endereco}</td>
-          <td id="nome">${pedido.nome}</td>
-          <td id="telefone">${pedido.telefone}</td>
+          <td>${pedido.endereco}</td>
+          <td>${pedido.nome}</td>
+          <td>${pedido.telefone}</td>
         </tr>
       `;
     });
     $("#pedidos-tbody").html(pedidosHtml);
+
+    $('#example').DataTable({
+      "language": {
+        "lengthMenu": "Mostrar _MENU_ entradas",
+        "zeroRecords": "Nenhum registro encontrado",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
+        "infoEmpty": "Mostrando 0 a 0 de 0 entradas",
+        "infoFiltered": "(filtrado de _MAX_ entradas no total)",
+        "search": "Pesquisar:",
+      }
+    });
 
     var ctx = document.getElementById("salesChart").getContext("2d");
     var salesChart = new Chart(ctx, {
@@ -150,14 +157,14 @@ $(document).ready(function () {
     modal.find("#modal-documento").text("254.457.703-57");
   });
 
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     const sidebarButtons = document.querySelectorAll(".div-2, .menu-button-group");
-  
+
     sidebarButtons.forEach((button) => {
-      button.addEventListener("click", function() {
-        // Remove a classe 'active' de todos os botões
+      button.addEventListener("click", function () {
+
         sidebarButtons.forEach((btn) => btn.classList.remove("active"));
-        // Adiciona a classe 'active' ao botão clicado
+
         this.classList.add("active");
       });
     });
@@ -234,20 +241,19 @@ $(document).ready(function () {
 
   document.addEventListener('DOMContentLoaded', function () {
     const addPageButtons = document.querySelectorAll('.btn-addpage');
-  
+
     addPageButtons.forEach(button => {
       button.addEventListener('click', function () {
         const userId = this.getAttribute('data-id');
         const userName = this.getAttribute('data-nome');
-  
+
         const modal = document.getElementById('EditUserModal');
         const modalUserId = modal.querySelector('#modalUserId');
         const modalUserName = modal.querySelector('#modalUserName');
-  
+
         modalUserId.value = userId;
         modalUserName.value = userName;
       });
     });
   });
-
 });

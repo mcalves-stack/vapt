@@ -14,6 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
 
   <link rel="stylesheet" href="../../../globals.css" />
+  <link rel="stylesheet" href="../../../lib/datables/dataTables.css" />
   <link rel="stylesheet" href="estoque.css" />
 </head>
 
@@ -107,14 +108,9 @@
           <div>
             <button class="button-exportar">EXPORTAR EXCEL</button>
           </div>
-          <div class="input-3">
-            <div class="select">
-              <input placeholder="Digite aqui" class="select-wrapper">
-            </div>
-          </div>
         </div>
         <div class="table-responsive">
-          <table class="mt-2" id="pedidosTable">
+          <table id="example" class="table" style="width:100%" class="mt-2">
             <thead class="cabecalho">
               <tr>
                 <th>SKU</th>
@@ -170,15 +166,6 @@
               </tr>
             </tbody>
           </table>
-          <div class="m-1 mt-4 div-radape">
-            <div class="text-rodape">Mostrando de <span id="start-record">1</span> até <span id="end-record">10</span> de <span id="total-records">0</span> registros</div>
-            <ul class="pagination-controls pagination">
-              <li class="page-item"><a href="#" class="page-link" id="previous-page">Anterior</a></li>
-              <li class="page-item active" id="page-1"><a href="#" class="page-link">1</a></li>
-              <li class="page-item" id="page-2"><a href="#" class="page-link">2</a></li>
-              <li class="page-item"><a href="#" class="page-link" id="next-page">Seguinte</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -193,6 +180,9 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../../../scripts/script.js"></script>
   <script src="../../../scripts/filter.js"></script>
+
+  <script src="../../../scripts/tables.js"></script>
+  <script src="../../../lib/datables/dataTables.js"></script>
 </body>
 
 </html>

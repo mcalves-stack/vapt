@@ -12,19 +12,21 @@ $(document).ready(function() {
     { id: 10, nome: 'Gabriel Almeida', email: 'gabriel@teste.com', empresa: 'Empresa J' },
     { id: 11, nome: 'Patrícia Mendes', email: 'patricia@teste.com', empresa: 'Empresa K' },
     { id: 12, nome: 'Roberto Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
+    { id: 13, nome: 'dwwad Nunes', email: 'roberto@teste.com', empresa: 'Empresa L' },
   ];
 
-  const rowsPerPage = 5;
-  let currentPage = 1;
-
-  function displayTable(page) {
-    const start = (page - 1) * rowsPerPage;
-    const end = start + rowsPerPage;
-    const paginatedData = data.slice(start, end);
-
+  function displayTable() {
     $('#table-body').empty();
 
-    paginatedData.forEach(item => {
+    data.forEach(item => {
       $('#table-body').append(`
         <tr>
           <td>${item.id}</td>
@@ -39,40 +41,7 @@ $(document).ready(function() {
         </tr>
       `);
     });
-
-    $('#start-record').text(start + 1);
-    $('#end-record').text(end > data.length ? data.length : end);
-    $('#total-records').text(data.length);
-
-    $('.page-item').removeClass('active');
-    $(`#page-${page}`).addClass('active');
   }
 
-  displayTable(currentPage);
-
-  $('#previous-page').on('click', function(event) {
-    event.preventDefault();
-    if (currentPage > 1) {
-      currentPage--;
-      displayTable(currentPage);
-    }
-  });
-
-  $('#next-page').on('click', function(event) {
-    event.preventDefault();
-    if (currentPage * rowsPerPage < data.length) {
-      currentPage++;
-      displayTable(currentPage);
-    }
-  });
-
-  $('.page-link').on('click', function(event) {
-    event.preventDefault();
-    const page = parseInt($(this).text());
-    if (page !== currentPage) {
-      currentPage = page;
-      displayTable(currentPage);
-    }
-  });
-
+  displayTable();
 });

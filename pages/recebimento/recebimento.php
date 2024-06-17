@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="../../globals.css" />
   <link rel="stylesheet" href="./recebimento.css" />
+  <link rel="stylesheet" href="../../lib/datables/dataTables.css" />
 </head>
 
 <body>
@@ -167,16 +168,12 @@
         <div class="frame-3">
           <button class="salvarbutton btn btn-outline-primary">Salvar <img id="save" src="../../img/save.svg" alt=""></button>
         </div>
-        <div class="table">
+        <div class="">
           <div class="frame-4">
             <button class="button-exportar">EXPORTAR EXCEL</button>
-            <div class="input-3">
-              <label class="text-wrapper-6">NF-e:</label>
-              <input class="form-control select" placeholder="Digite aqui">
-            </div>
           </div>
           <div class="table-responsive">
-            <table class="mt-2">
+            <table id="example" class="table" style="width:100%" class="mt-2">
               <thead class="cabecalho">
                 <tr>
                   <th></th>
@@ -229,6 +226,9 @@
 
     <script src="../../pages/dashboard/dados.php"></script>
     <script src="../../scripts/input-file.js"></script>
+
+    <script src="../../scripts/tables.js"></script>
+    <script src="../../lib/datables/dataTables.js"></script>
 
 </body>
 

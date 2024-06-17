@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="../../globals.css" />
   <link rel="stylesheet" href="./pedido.css" />
+  <link rel="stylesheet" href="../../lib/datables/dataTables.css" />
 </head>
 
 <body>
@@ -130,93 +131,106 @@
         <div class="table">
           <div class="frame-2">
             <button class="button-exportar">EXPORTAR EXCEL</button>
-            <div class="input-2">
-              <div class="text-wrapper-7">NF-e:</div>
-              <div class="select">
-                <input placeholder="Digite aqui" class="select-wrapper">
-              </div>
-            </div>
           </div>
-          <div class="tabela">
-            <div class="cabecalho">
-              <div class="pedido-wrapper">
-                <div class="text-wrapper-8">PEDIDO</div>
-              </div>
-              <div class="nf-e-wrapper">
-                <div class="text-wrapper-8">NF-E</div>
-              </div>
-              <div class="frame-3">
-                <div class="text-wrapper-8">STATUS</div>
-              </div>
-              <div class="frame-3">
-                <div class="text-wrapper-8">DATA</div>
-              </div>
-              <div class="frame-4">
-                <div class="text-wrapper-8">UF</div>
-              </div>
-              <div class="cidade-wrapper">
-                <div class="text-wrapper-9">CIDADE</div>
-              </div>
-              <div class="frame-5">
-                <div class="text-wrapper-9">ENDEREÇO</div>
-              </div>
-              <div class="frame-5">
-                <div class="text-wrapper-9">NOME</div>
-              </div>
-              <div class="qtd-wrapper">
-                <div class="text-wrapper-8">QTD.</div>
-              </div>
-              <div class="frame-6">
-                <div class="text-wrapper-8">QTD.</div>
-              </div>
-            </div>
-            <div class="linha">
-              <div class="frame-7">
-                <div class="text-wrapper-10">001</div>
-              </div>
-              <div class="frame-8">
-                <div class="text-wrapper-11">00001</div>
-              </div>
-              <div class="frame-9">
-                <div class="text-wrapper-10">ENVIADO</div>
-              </div>
-              <div class="frame-9">
-                <div class="text-wrapper-11">17/05/2024</div>
-              </div>
-              <div class="sp-wrapper">
-                <div class="text-wrapper-10">SP</div>
-              </div>
-              <div class="sao-paulo-wrapper">
-                <div class="text-wrapper-12">SAO PAULO</div>
-              </div>
-              <div class="frame-10">
-                <p class="text-wrapper-12">50829 ROSARIO VALLEYS SUITE 955</p>
-              </div>
-              <div class="frame-10">
-                <div class="text-wrapper-12">DARRIN REMPEL</div>
-              </div>
-              <div class="frame-11">
-                <div class="text-wrapper-10">1.00</div>
-              </div>
-              <div class="frame-12">
-                <div class="text-wrapper-10">1.00</div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div class="table-responsive">
+          <table id="example" class="display" style="width:100%">
+            <thead class="cabecalho">
+              <tr>
+                <th>PEDIDO</th>
+                <th>NF-E</th>
+                <th>STATUS</th>
+                <th>DATA</th>
+                <th>UF</th>
+                <th>CIDADE</th>
+                <th>ENDEREÇO</th>
+                <th>NOME</th>
+                <th>QTD.</th>
+                <th>QTD.</th>
+              </tr>
+            </thead>
+            <tbody clas="">
+              <tr>
+                <td>12345</td>
+                <td>67890</td>
+                <td>Entregue</td>
+                <td>2024-06-01</td>
+                <td>SP</td>
+                <td>São Paulo</td>
+                <td>Rua das Flores, 123</td>
+                <td>João Silva</td>
+                <td>10</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>23456</td>
+                <td>78901</td>
+                <td>Pendente</td>
+                <td>2024-06-05</td>
+                <td>RJ</td>
+                <td>Rio de Janeiro</td>
+                <td>Avenida Atlântica, 456</td>
+                <td>Maria Oliveira</td>
+                <td>5</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>34567</td>
+                <td>89012</td>
+                <td>Cancelado</td>
+                <td>2024-06-10</td>
+                <td>MG</td>
+                <td>Belo Horizonte</td>
+                <td>Rua da Paz, 789</td>
+                <td>Carlos Pereira</td>
+                <td>8</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>45678</td>
+                <td>90123</td>
+                <td>Entregue</td>
+                <td>2024-06-15</td>
+                <td>BA</td>
+                <td>Salvador</td>
+                <td>Ladeira da Barra, 321</td>
+                <td>Ana Costa</td>
+                <td>15</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>56789</td>
+                <td>01234</td>
+                <td>Pendente</td>
+                <td>2024-06-20</td>
+                <td>RS</td>
+                <td>Porto Alegre</td>
+                <td>Av. Ipiranga, 654</td>
+                <td>Paulo Santos</td>
+                <td>20</td>
+                <td>20</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../../scripts/script.js"></script>
   <script src="../../scripts/input-file.js"></script>
+
+  <script src="../../scripts/tables.js"></script>
+  <script src="../../lib/datables/dataTables.js"></script>
 </body>
 
 </html>

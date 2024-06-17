@@ -336,6 +336,13 @@
   border-radius: 5px;
   padding: 10px 20px;
   font-weight: 600;
+  margin-top: 2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: end;
+  margin-right: 2rem;
 }
 
 .btn-primary:hover {
@@ -630,6 +637,12 @@ label {
   color: #fff;
   background-color: var(--pagination);
 
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
 }
 
 .div-radape {

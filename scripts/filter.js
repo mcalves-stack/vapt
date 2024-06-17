@@ -15,7 +15,7 @@ $(document).ready(function() {
       icon.attr('src', '../../img/eyes-olhoaberto.svg'); 
     } else {
       input.attr('type', 'password');
-      icon.attr('src', '../../img/visible-fechado.svg'); 
+      icon.attr('src', '../../img/visible-fechado.png'); 
     }
   });
 

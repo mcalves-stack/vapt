@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Vapt</title>
-
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="../../globals.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../../lib/datables/dataTables.css" />
 </head>
 
 <body>
@@ -113,28 +113,28 @@
             </div>
             <div class="linha-2">
               <div class="buttons-2 pedido-btn">
-                <div class="title-4">PEDIDOS ENVIADOS</div>
-                <div class="element-2">3</div>
+                <span class="title-4">PEDIDOS ENVIADOS</span>
+                <span class="element-2">3</span>
               </div>
               <div class="buttons-2 pedido-btn">
-                <div class="title-4">PEDIDOS ACEITOS</div>
-                <div class="element-2">3</div>
+                <span class="title-4">PEDIDOS ACEITOS</span>
+                <span class="element-2">3</span>
               </div>
               <div class="buttons-2 pedido-btn">
-                <div class="title-4">PEDIDOS EM SEPARAÇÃO</div>
-                <div class="element-2">3</div>
+                <span class="title-4">PEDIDOS EM SEPARAÇÃO</span>
+                <span class="element-2">3</span>
               </div>
               <div class="buttons-2 pedido-btn">
-                <div class="title-4">PEDIDOS EM EXPEDIÇÃO</div>
-                <div class="element-2">3</div>
+                <span class="title-4">PEDIDOS EM EXPEDIÇÃO</span>
+                <span class="element-2">3</span>
               </div>
               <div class="buttons-2 pedido-btn">
-                <div class="title-4">PEDIDOS EM ROTA</div>
-                <div class="element-2">3</div>
+                <span class="title-4">PEDIDOS EM ROTA</span>
+                <span class="element-2">3</span>
               </div>
               <div class="buttons-2 pedido-btn">
-                <div class="title-4">PEDIDOS ENTREGUES</div>
-                <div class="element-2">13</div>
+                <span class="title-4">PEDIDOS ENTREGUES</span>
+                <span class="element-2">13</span>
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@
         <div class="dashboard-pedidos">
           <div class="text-pedidos" id="nome-pedido-titulo">Pedidos Enviados</div>
           <div class="table-responsive">
-            <table class="table tabela">
+            <table id="example" class="tabela" style="width:100%">
               <thead class="cabecalho">
                 <tr>
                   <th>DATA / HORA</th>
@@ -197,16 +197,15 @@
                   <th>QTD.</th>
                   <th>UF</th>
                   <th>CIDADE</th>
-                  <th id="endereco-head">ENDEREÇO</th>
-                  <th id="nome-head">NOME</th>
-                  <th id="tel-head">TELEFONE</th>
+                  <th>ENDEREÇO</th>
+                  <th>NOME</th>
+                  <th>TELEFONE</th>
                 </tr>
               </thead>
-              <tbody id="pedidos-tbody">
+              <tbody  id="pedidos-tbody">
               </tbody>
             </table>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -254,14 +253,17 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <script src="../../scripts/script.js"></script>
   <script src="../../scripts/filter.js"></script>
+
+  <script src="../../lib/datables/dataTables.js"></script>
 </body>
 
 </html>
